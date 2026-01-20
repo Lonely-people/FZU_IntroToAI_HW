@@ -1,0 +1,61 @@
+\documentclass[12pt]{ctexart}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{subcaption}
+
+\begin{document}
+
+由于随机种子 112401520，112401521，……，112401525 均无解，选择 112401526 作为随机种子。
+
+图 \ref{fig: main_1} 展示了运行结果，其中图 \ref{fig: p1} 是初始地图，图 \ref{fig: p2} 是 A* 算法的结果，图 \ref{fig: p3} 是 BFS 算法的结果。
+
+图 \ref{fig: main_2} 展示了可视化结果，其中图 \ref{fig: p4} 是 A* 算法的可视化，图 \ref{fig: p5} 是 BFS 算法的可视化。
+
+从下列图中可知，A* 和 BFS 算法都能寻找到迷宫的最短路径，但 A* 算法需要遍历的迷宫格子数量更少，而 BFS 算法需要遍历的迷宫格子数量更多，体现了 A* 算法的效率高于 BFS 算法。
+
+\begin{figure}[htp]
+    \centering
+    \begin{subfigure}{0.8\textwidth}
+        \centering
+        \includegraphics[width = \textwidth, keepaspectratio]{pic1.png}
+        \caption{学号和初始地图}
+        \label{fig: p1}
+    \end{subfigure}
+    \begin{subfigure}{0.8\textwidth}
+        \centering
+        \includegraphics[width = \linewidth, keepaspectratio]{pic2.png}
+        \caption{A* 算法结果}
+        \label{fig: p2}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.8\textwidth}
+        \centering
+        \includegraphics[width = \linewidth, keepaspectratio]{pic3.png}
+        \caption{BFS 算法结果}
+        \label{fig: p3}
+    \end{subfigure}
+    \caption{运行结果}
+    \label{fig: main_1}
+\end{figure}
+
+\FloatBarrier
+
+\begin{figure}[htp]
+    \centering
+    \begin{subfigure}{0.8\textwidth}
+        \centering
+        \includegraphics[width = \textwidth, keepaspectratio]{figure_astar.png}
+        \caption{A* 算法可视化结果}
+        \label{fig: p4}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.8\textwidth}
+        \centering
+        \includegraphics[width = \textwidth, keepaspectratio]{figure_bfs.png}
+        \caption{BFS 算法可视化结果}
+        \label{fig: p5}
+    \end{subfigure}
+    \caption{matplotlib 可视化}
+    \label{fig: main_2}
+\end{figure}
+
+\end{document}
